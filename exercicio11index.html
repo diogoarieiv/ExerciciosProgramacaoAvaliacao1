@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"], input[type="reset"] {
+            width: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro de Aluno</h1>
+    <form action="cadastro.php" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="matricula">Matrícula:</label>
+        <input type="text" id="matricula" name="matricula" required>
+
+        <label for="curso">Curso:</label>
+        <input type="text" id="curso" name="curso">
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone">
+
+        <label for="endereco">Endereço:</label>
+        <textarea id="endereco" name="endereco"></textarea>
+
+        <label for="cep">CEP:</label>
+        <input type="text" id="cep" name="cep">
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade">
+
+        <label for="uf">UF:</label>
+        <input type="text" id="uf" name="uf" maxlength="2">
+
+        <label for="curso_horas">Curso para Horas Complementares:</label>
+        <input type="text" id="curso_horas" name="curso_horas">
+
+        <label for="carga_horaria">Carga Horária:</label>
+        <input type="number" id="carga_horaria" name="carga_horaria" min="0">
+
+        <input type="submit" value="Cadastrar">
+        <input type="reset" value="Limpar">
+    </form>
+
+    <h1>Atualização de Carga Horária</h1>
+    <form action="somar_carga.php" method="post">
+        <label for="matricula_atualizacao">Matrícula:</label>
+        <input type="text" id="matricula_atualizacao" name="matricula_atualizacao" required>
+
+        <label for="nova_carga_horaria">Nova Carga Horária:</label>
+        <input type="number" id="nova_carga_horaria" name="nova_carga_horaria" min="0" required>
+
+        <input type="submit" value="Atualizar">
+        <input type="reset" value="Limpar">
+    </form>
+</body>
+</html>
